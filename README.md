@@ -1,4 +1,5 @@
 📦 S3 Bucket File Lister
+
 This Python script uses boto3 to connect to Amazon S3 and list all objects inside a specified bucket.
 
 🔧 Features
@@ -13,7 +14,7 @@ Make sure you have the following installed:
 - AWS credentials configured (~/.aws/credentials) or environment variables set
 
 🚀 How to Run
-python s3_lister.py
+python3 s3_lister.py
 
 You’ll be prompted to enter an S3 bucket name:
 Enter the S3 bucket name: my-awesome-bucket
@@ -22,19 +23,7 @@ data.json
 report.pdf
 images/photo.jpg
 
-🧠 How It Works
-def list_s3_objects(bucket_name):
-    s3 = boto3.client('s3')
-    response = s3.list_objects_v2(Bucket=bucket_name)
-
-    if 'Contents' in response:
-        for obj in response['Contents']:
-            print(obj['Key'])
-    else:
-        print("No files found.")
-
-
-📁 File Structure
+📁 File Structure of this repository
 s3_lister.py
 README.md
 
